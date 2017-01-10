@@ -7,6 +7,9 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var path = require('path');
+mongoose.connect("mongodb://admin:5Vh_iuG4VuLr@"+process.env.OPENSHIFT_MONGODB_HOST+":"+process.env.OPENSHIFT_MONGODB_DB_PORT+"/lmttfy");
 var User = require("./models/User");
 
 // configure app to use bodyParser()
